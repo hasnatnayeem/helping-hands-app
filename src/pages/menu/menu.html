@@ -8,7 +8,7 @@
   <ion-grid>
     <ion-row class="menu-header">
       <ion-col offset-4 col-4 offset-md-4 col-md-4 offset-sm-4 col-sm-4 class="logo" text-center>
-        <img src="./assets/imgs/logo2.png" alt="" text-center color="primary">
+        <img src="./assets/icon/icon.png" alt="" text-center color="primary">
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -27,8 +27,15 @@
 
       <ion-col col-6 col-md-3 col-sm-3>
         <div class="m-menu" (click)="goCollectionPage('All Collections')">
-          <img src="./assets/imgs/dining-serv.png" alt="">
+          <img src="./assets/imgs/all_collections.png" alt="">
           <p>Collections</p>
+        </div>
+      </ion-col>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goExpensePage()">
+          <img src="./assets/imgs/expense.png" alt="">
+          <p>Expenses</p>
         </div>
       </ion-col>
 
@@ -36,21 +43,21 @@
 
       <ion-col col-6 col-md-3 col-sm-3>
           <div class="m-menu" (click)="goCollectionPage('My Collections')">
-            <img src="./assets/imgs/dining-serv.png" alt="">
+            <img src="./assets/imgs/my_collection.png" alt="">
             <p>My Collections</p>
           </div>
         </ion-col>
 
         <ion-col col-6 col-md-3 col-sm-3>
           <div class="m-menu" (click)="goFormPage()">
-            <img src="./assets/imgs/dining-serv.png" alt="">
+            <img src="./assets/imgs/news-icon.png" alt="">
             <p>New Entry</p>
           </div>
         </ion-col>
 
         <ion-col col-6 col-md-3 col-sm-3>
           <div class="m-menu" (click)="goDonorPage()">
-            <img src="./assets/imgs/dining-serv.png" alt="">
+            <img src="./assets/imgs/picto_user.png" alt="">
             <p>Donors</p>
           </div>
         </ion-col>

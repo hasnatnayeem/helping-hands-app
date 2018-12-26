@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ title }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="list-avatar-page">
+  <ion-list>
+    <ion-item *ngFor="let item of expenses">
+      <ion-avatar item-start>
+        <img src="{{ item.photo }}">
+      </ion-avatar>
+      <h2>{{ item.spender_name }}</h2>
+      <p>{{ item.spent_at }} - {{ item.reference }}</p>
+      <h3 clear item-end style = 'color: red'>{{ item.amount }}/-</h3>
+    </ion-item>
+    <hr>
+    <hr>
+    <ion-item *ngFor="let item of summary">
+      <h2>{{ item[0] }}</h2>
+      <h3 clear item-end style = 'color: red'>{{ item[1] }}/-</h3>
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>

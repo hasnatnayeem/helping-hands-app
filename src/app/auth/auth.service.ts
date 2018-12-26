@@ -6,8 +6,8 @@ import { LoadingController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 
 // let apiUrl = "http://192.168.178.46:8000/api/"
-let apiUrl = "http://127.0.0.1:8000/api/v1/"
-// let apiUrl = "http://35.200.224.144:5003/api/v1/"
+// let apiUrl = "http://127.0.0.1:8000/api/v1/"
+let apiUrl = "http://35.200.224.144:5003/api/v1/"
 
 @Injectable()
 export class AuthService {

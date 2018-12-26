@@ -10,6 +10,7 @@ import { FormPage } from '../form/form';
 // import { ContactPage } from '../contact/contact';
 // import { StatusPage } from '../status/status';
 import { LoginPage } from '../login/login';
+import { ExpensePage } from '../expense/expense';
 // import { EventPage } from '../event/event';
 // import { DocumentsPage } from '../documents/documents';
 
@@ -72,6 +73,10 @@ export class MenuPage {
 
     goCollectionPage(title) {
         this.navCtrl.push(CollectionPage, { collector_id: this.session.user.id, title: title });
+    }
+
+    goExpensePage() {
+        this.navCtrl.push(ExpensePage);
     }
 
     goDonorPage() {

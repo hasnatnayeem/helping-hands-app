@@ -2,11 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 import { MenuPage } from '../menu/menu';
-// import { NgForm } from '@angular/forms';
 import { AuthService } from '../../app/auth/auth.service';
-// import { Http } from '@angular/http';
 
-import { AlertController } from 'ionic-angular';
 
 @Component({
 	selector: 'page-login',

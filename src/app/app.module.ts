@@ -31,6 +31,7 @@ import { EmployeeFilterPipe }from './employee.pipe';
 import { Calendar } from '@ionic-native/calendar';
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Push } from '@ionic-native/push';
+import { ExpensePage } from '../pages/expense/expense';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { Push } from '@ionic-native/push';
     EmployeeFilterPipe,
     CollectionPage,
     DonorPage,
+    ExpensePage,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +60,7 @@ import { Push } from '@ionic-native/push';
     FormPage,
     CollectionPage,
     DonorPage,
+    ExpensePage,
  ],
   providers: [
     StatusBar,
