@@ -1,22 +1,5 @@
-page-contact {
-	.list-avatar-page {
-	  ion-note {
-	    font-size: 12px;
-	    align-self: flex-start;
-	    margin-top: 14px;
-	  }
-	}
-	
-	.contact-image {
-		height: 32px;
-		width: 32px;
-    }
-    .position-bottom {
-        position: fixed;
-        bottom: 0;
-        right: 0;
-    }
-    ion-list {
-        margin-bottom: 100px;
+page-donor {
+    .bloodgroup {
+        color: red;
     }
 }

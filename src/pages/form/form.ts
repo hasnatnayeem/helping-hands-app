@@ -64,7 +64,6 @@ export class FormPage {
     
     this.authService.startLoadingAlert("Please wait")
 		this.authService.postData(data, 'donations/').then((result) => {
-      console.log(result)
 			this.authService.stoptLoadingAlert()
         form.reset()
         this.authService.showAlert("Message", "Entry has been added successfully")

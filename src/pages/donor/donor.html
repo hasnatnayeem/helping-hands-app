@@ -12,7 +12,17 @@
         <img src="{{ item.photo }}">
       </ion-avatar>
       <h2>{{ item.name }}</h2>
-      
+
+      <p *ngIf="item.blood_group" class="bloodgroup">{{ item.blood_group }}</p>
+
+      <a *ngIf="item.email" href="mailto:{{ item.email }}" clear item-end>
+          <ion-icon name='mail' item-start></ion-icon>
+      </a>
+
+      <a *ngIf="item.phone" href="tel:{{ item.phone }}" clear item-end>
+          <ion-icon name='call' item-start></ion-icon>
+      </a>
+
     </ion-item>
   </ion-list>
 
