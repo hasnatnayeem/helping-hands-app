@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AuthService } from '../../app/auth/auth.service';
 import { CollectionPage } from '../collection/collection';
 import { DonorPage } from '../donor/donor';
@@ -32,10 +32,34 @@ export class MenuPage {
     loading: any;
 
     constructor(public navCtrl: NavController,
-        public navParams: NavParams, public authService: AuthService) {
+        public navParams: NavParams, public authService: AuthService,
+        private alertCtrl: AlertController) {
+
         this.session = this.authService.getSession();
         
     }
+
+    confirmLogout() {
+		let alert = this.alertCtrl.create({
+			title: 'Logout',
+			message: 'Are you sure you want to logout?',
+			buttons: [
+				{
+					text: 'No',
+					role: 'cancel',
+					handler: () => {
+					}
+				},
+				{
+					text: 'Yes',
+					handler: () => {
+						this.logout();
+					}
+				}
+			]
+		});
+		alert.present();
+	}
 
     logout() {
         this.authService.logout()

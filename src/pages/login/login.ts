@@ -17,49 +17,29 @@ export class LoginPage {
 	loading: any;
 	userData = { "username": "", "password": "" };
 
-	constructor(public navCtrl: NavController, public loadingCtrl: LoadingController, public authService: AuthService, private alertCtrl: AlertController) {
+	constructor(public navCtrl: NavController, public authService: AuthService) {
 		if (authService.isAuthenticated()) {
 			this.navCtrl.setRoot(MenuPage)
 		}
 	}
 
-	startLoadingAlert(message) {
-		this.loading = this.loadingCtrl.create({
-			content: message
-		});		
-		this.loading.present();
-	}
-
-	stoptLoadingAlert() {
-		this.loading.dismiss();
-	}
-
-	showAlert(title, message) {
-		let alert = this.alertCtrl.create({
-		  title: title,
-		  subTitle: message,
-		  buttons: ['Dismiss']
-		});
-		alert.present();
-	}
 
 	login() {
-		this.startLoadingAlert("Please wait")
+		this.authService.startLoadingAlert("Please wait")
 		this.authService.postData(this.userData, 'login/').then((result) => {
 			this.responseData = result;
-			this.stoptLoadingAlert()
+			this.authService.stoptLoadingAlert()
 			if (this.responseData.token) {
-				//this.showAlert("Token", this.responseData.token) 
 				console.log(this.responseData);
 				localStorage.setItem('session', JSON.stringify(this.responseData));
 				this.navCtrl.setRoot(MenuPage);
 			}
-			else { 
-				this.showAlert("Message", this.responseData.message) 
+			else {
+				this.authService.showAlert("Message", this.responseData.message)
 			}
 		}, (err) => {
-			this.stoptLoadingAlert()
-			this.showAlert("Error", "An error occurred")
+			this.authService.stoptLoadingAlert()
+			this.authService.showAlert("Error", "An error occurred")
 		});
 	}
 }
