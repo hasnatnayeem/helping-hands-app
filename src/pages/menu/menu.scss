@@ -1,0 +1,65 @@
+page-menu {
+  .menu-wrapper {
+    // height: inherit;
+    // background-image: url("../assets/imgs/bg02.png");
+    background-color: #E2E2E2;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%; // background-attachment: fixed;
+  
+    .menu-header {
+      background-color: map-get($colors, primary);
+    }
+    .logo {
+      margin-top: 5%;
+      margin-bottom: 25px;
+      img {
+        // height: 70px; 
+        // width: 115px; 
+        // filter: brightness(0) invert(3);
+      }
+    }
+  }
+  .m-menu {
+    background: url("../assets/imgs/triangle_pattern3.png"), rgba(242, 100, 34, 0.9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    img {
+      margin: 0 auto;
+      height: 50px;
+      width: 50px;
+      filter: brightness(0) invert(3);
+    }
+    p {
+      color: white;
+    }
+    &:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+      transition: 1s;
+    }
+  } 
+  
+  // @media (max-width:767px)  {
+  // 	page-timeline{
+  // 		display: none;
+  // 	}
+  // }
+
+
+  ion-slides {
+	  margin-top: 20px;
+	  width: 100%;
+	  height: auto !important;
+	  color: black;
+  }
+
+
+
+}
+

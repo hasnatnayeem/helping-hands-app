@@ -1,0 +1,7 @@
+{
+  "name": "helping-hands",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

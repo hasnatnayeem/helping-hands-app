@@ -1,0 +1,61 @@
+page-form {
+	ion-input {
+		input {
+		  text-align: right;
+		  /* IF YOU ALSO WANT TO PUSH PLACHEHOLDER TO THE RIGHT USE THE FOLLOWING, IF NOT JUST DELETE THE ::-webkit-input-placeholder*/
+		  ::-webkit-input-placeholder {
+			text-align: right;
+		  }
+		}
+	  }
+	
+	.background {
+		background: url("../assets/imgs/triangle_pattern2.png"), #f26422;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.address {
+			margin-top: 10%;
+
+			ion-item {
+				background-color: rgba(0, 0, 0, 0.5);
+				color: #fff;
+				font-size: 17px;
+				
+				p {
+					color: #fff;
+				}
+			}
+		}
+
+		form {
+
+			ion-item {
+				background-color: rgba(0, 0, 0, 0.5);
+				color: #fff;
+			}
+
+			.send-btn {
+				padding: 17px;
+
+				&:hover {
+					background: rgba(163, 139, 232, 0.7);
+					// padding: 19px;
+				}
+			}
+		}
+
+		.home-btn {
+			// background: rgba(25, 181, 254, 0.8);
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.position-bottom {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}

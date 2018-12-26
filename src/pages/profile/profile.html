@@ -1,0 +1,139 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+  <div *ngIf="!isEmployee">
+    <ion-grid class="user-profile">
+      <ion-row>
+        <ion-col col-12 offset-md-2 col-md-8 offset-sm-4 col-sm-6 text-center style="background-color: rgba(0, 0, 0, 0.5); color: #fff;">
+
+          <button *ngIf="editMode == false && isMyProfile" ion-button small (click)="toggleEditMode()" class="edit">
+            Edit
+          </button>
+          <button *ngIf="editMode" ion-button small (click)="toggleEditMode()" class="edit">
+            Cancel
+          </button>
+
+
+          <div text-center>
+            <img *ngIf="editMode == false" [src]="profilePictureSrc" text-center>
+            <img *ngIf="imageSrc && editMode" [src]="imageSrc" (click)="selectImage($event)" text-center>
+
+            <input type="file" value="" hidden imageUpload (imageSelected)="imageSelected($event)" [resizeOptions]="resizeOptions"
+              id="imageElement">
+            <br>
+
+            <button ion-button color="secondary" *ngIf="!imageSrc && editMode" (click)="selectImage($event)">Change
+              Image</button>
+
+          </div>
+
+
+          <p *ngIf="editMode == false">{{ contact.name }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-grid class="user-contact-info">
+      <ion-row>
+        <ion-col col-12 offset-md-2 col-md-8 offset-sm-4 col-sm-6>
+          <a *ngIf="editMode === false" href="tel:{{ contact.phone }}" class="phone-number">
+            <ion-item>
+              <ion-icon name='call' item-start></ion-icon>
+              <p>{{ contact.phone }}</p>
+            </ion-item>
+          </a>
+
+          <ion-item *ngIf="editMode">
+            <ion-icon name='person' item-start></ion-icon>
+            <input [(ngModel)]="tempContact.first_name" type="text" placeholder="First name" />
+          </ion-item>
+
+          <ion-item *ngIf="editMode">
+            <ion-icon name='person' item-start></ion-icon>
+            <input [(ngModel)]="tempContact.last_name" type="text" placeholder="Last name" />
+          </ion-item>
+
+          <ion-item *ngIf="editMode">
+            <ion-icon name='call' item-start></ion-icon>
+            <input [(ngModel)]="tempContact.phone" type="text" placeholder="xxx-xxxx" />
+          </ion-item>
+
+
+          <a *ngIf="editMode === false" href="mailto:{{ contact.email }}">
+            <ion-item>
+              <ion-icon name='mail' item-start></ion-icon>
+              <p>{{ contact.email }}</p>
+            </ion-item>
+          </a>
+          <ion-item *ngIf="editMode">
+            <ion-icon name='mail' item-start></ion-icon>
+            <input [(ngModel)]="tempContact.email" type="email" placeholder="Email" />
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name='home' item-start></ion-icon>
+            <p *ngIf="editMode === false">Unit {{ contact.unit}}</p>
+            <input *ngIf="editMode" [(ngModel)]="tempContact.unit" type="text" placeholder="Unit no." />
+          </ion-item>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <div text-center>
+            <button *ngIf="editMode" color="secondary" ion-button class="home-btn" (click)="onUpdate()">
+              Update</button>
+    </div>
+
+  </div>
+
+
+
+  <div *ngIf="isEmployee">
+    <ion-grid class="user-profile">
+      <ion-row>
+        <ion-col col-12 offset-md-2 col-md-8 offset-sm-4 col-sm-6 text-center style="background-color: rgba(0, 0, 0, 0.5); color: #fff;">
+
+          <div text-center>
+            <img *ngIf="employeeData.image == ''" src="./assets/imgs/profile-pic.png" class="contact-image">
+            <img *ngIf="employeeData.image != ''" [src]="employeeData.image" class="contact-image">
+          </div>
+          <p>{{ employeeData.name }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-grid class="user-contact-info">
+      <ion-row>
+        <ion-col col-12 offset-md-2 col-md-8 offset-sm-4 col-sm-6>
+          <a href="tel:{{ employeeData.phone }}" class="phone-number">
+            <ion-item>
+              <ion-icon name='call' item-start></ion-icon>
+              <p>{{ employeeData.phone }}</p>
+            </ion-item>
+          </a>
+
+          <a href="mailto:{{ employeeData.email }}">
+            <ion-item>
+              <ion-icon name='mail' item-start></ion-icon>
+              <p>{{ employeeData.email }}</p>
+            </ion-item>
+          </a>
+
+          <ion-item>
+            <ion-icon name='home' item-start></ion-icon>
+            <p>{{ employeeData.department}}</p>
+          </ion-item>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

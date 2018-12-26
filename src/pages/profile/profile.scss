@@ -1,0 +1,60 @@
+page-profile {
+	.background {
+		background: url("../assets/imgs/triangle_pattern2.png"), rgb(0, 61, 113);
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		.user-profile {
+
+			img {
+				width: 140px; 
+				height: auto; 
+				margin: 0 auto;
+				padding-top: 20px;
+			}
+		}
+
+		.user-contact-info {
+
+			ion-item {
+				background-color: rgba(0, 0, 0, 0.5);
+				color: #fff;
+
+				p {
+					color: #fff;
+				}
+			}
+		}
+		.position-bottom {
+			position: fixed;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+
+		.buttons {
+
+			button {
+				background: rgba(25, 181, 254, 0.8);
+				// padding-top: 20px;
+				// padding-bottom: 20px;
+			}
+		}
+
+
+		.phone-number {
+			text-decoration: none;
+		}
+	}
+
+	.edit {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	input {
+		color: black;
+	}
+	
+}

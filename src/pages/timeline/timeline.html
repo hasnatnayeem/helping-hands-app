@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color = "primary">
+    <ion-title>News</ion-title>
+    <ion-buttons end>
+      <button *ngIf="!isAuthenticated" ion-button (click)="goToLoginPage()">Login
+        <ion-icon name="login"></ion-icon>
+      </button>
+
+    <!--      <button *ngIf="isAuthenticated" ion-button (click)="goToStatusPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+-->
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="cards-bg social-cards background">
+
+  <ion-slides *ngIf = "news && news.length" autoplay="3000" loop="true" speed="500" pager="true">
+      <ion-slide *ngFor="let item of news">
+          <img src="{{ item.image }}" class="posted-img img-responsive">
+          <br>
+          <!-- <span>
+              <h2>{{ item.user_name }}</h2>
+              <p>{{ item.post_time }}</p>
+          </span> -->
+      </ion-slide>
+    
+  </ion-slides>
+
+</ion-content>
+

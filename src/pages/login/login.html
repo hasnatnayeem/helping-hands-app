@@ -1,0 +1,32 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>Login</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+	<ion-grid>
+		<ion-row>
+			<ion-col offset-md-2 col-md-8 offset-sm-4 col-sm-4 text-center>
+				<span id="login-form">
+					<ion-list>
+						<p>Username</p>
+						<ion-item class="no-padding">
+							<ion-input type="text" [(ngModel)]="userData.username" placeholder="Enter username"></ion-input>
+						</ion-item>
+					</ion-list>
+					<ion-list>
+						<p>Password</p>
+						<ion-item>
+							<ion-input type="password" [(ngModel)]="userData.password" placeholder="Enter password"></ion-input>
+						</ion-item>
+					</ion-list>
+					<button ion-button block icon-left id="login-form-button" (click)="login()">
+						<ion-icon name="log-in"></ion-icon>
+						Log In
+					</button>
+				</span>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

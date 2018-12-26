@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "564263066150",
+    "firebase_url": "https://judson-ionic.firebaseio.com",
+    "project_id": "judson-ionic",
+    "storage_bucket": "judson-ionic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564263066150:android:633c2a745eabfdaa",
+        "android_client_info": {
+          "package_name": "com.piranhahometech.smart-connect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564263066150-1oaq7pdn49fob5khug85nsk80v43e45n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhx3tO20cLi7cPoxrHOSrq9OkJ1h_pRuo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

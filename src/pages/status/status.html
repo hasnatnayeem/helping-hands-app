@@ -1,0 +1,32 @@
+<ion-header>
+	<ion-navbar color = "primary">
+		<ion-title>Security</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+	<ion-grid>
+		<ion-row>
+			<ion-col col-12 offset-md-2 col-md-8 offset-sm-2 col-sm-8>
+				<ion-card>
+					<div>
+						<div text-center>
+							<input type="file" value="" hidden imageUpload
+							(imageSelected)="selected($event)"
+							[resizeOptions]="resizeOptions" id = "imageElement">
+							<br>
+							<button ion-button color="secondary" *ngIf="!src" (click)="selectFile($event)">Select Image</button>
+						</div>
+						<img [src]="src" (click)="selectFile($event)" />
+						<br>
+						<div text-center *ngIf="src">
+							<button ion-button color="secondary" (click)="onUpload()">Post</button>
+						</div>
+					</div>
+
+				</ion-card>
+
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

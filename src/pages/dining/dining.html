@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar color = "primary">
+        <ion-title>Dining</ion-title>
+      </ion-navbar>
+    <ion-toolbar>
+      <ion-segment [(ngModel)]="selected" color="secondary">
+        <ion-segment-button value="today" (click) = "loadMenu()">
+            Today
+        </ion-segment-button>
+        <ion-segment-button value="all" (click) = "loadAllMenus()">
+            Show All
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="background">
+  <ion-grid class="address">
+    <ion-row>
+      <ion-col offset-md-2 col-md-8 offset-sm-4 col-sm-4 col-12>
+        <div *ngFor="let menu of menus">
+          <h3>{{ menu.day }}</h3>
+          <div [innerHTML]=menu.content></div>
+          <hr><hr>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

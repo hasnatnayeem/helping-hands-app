@@ -1,0 +1,38 @@
+page-timeline {
+
+	.background {
+		
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		ion-list {
+
+			ion-item {
+				background-color: rgba(0, 0, 0, 0.4);
+				color: #fff;
+
+				span {
+					background-color: rgba(0, 0, 0, 0.3);
+					
+					h2, p {
+						color: #fff;
+					}
+				}
+
+				.posted-img {
+					//height: 200px;
+				}
+			}
+		}
+
+		.img-responsive{
+			width: 100%;
+			height: auto;
+			}
+
+		
+			ion-slide {
+				color: white;
+			}
+	}
+}

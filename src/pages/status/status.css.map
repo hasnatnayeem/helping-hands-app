@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEC,uBAAY,CACX,UAAU,CAAE,mDAA4D,CACxE,iBAAiB,CAAE,SAAS,CAC5B,eAAe,CAAE,KAAK,CAIrB,yCAAS,CACR,gBAAgB,CAAE,eAAkB,CACpC,KAAK,CAAE,IAAI,CAEX,kDAAS,CACR,gBAAgB,CAAE,eAAkB,CACpC,KAAK,CAAE,IAAI,CAGZ,qIAAU,CACT,KAAK,CAAE,IAAI",
+"sources": ["status.scss"],
+"names": [],
+"file": "status.css"
+}

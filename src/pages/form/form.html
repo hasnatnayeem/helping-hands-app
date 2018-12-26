@@ -1,0 +1,46 @@
+<ion-header>
+
+	<ion-navbar color="primary">
+		<ion-title>Donation</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+<ion-content class="background">
+	<ion-grid>
+		<ion-row>
+			<ion-col offset-md-2 col-md-8 offset-sm-4 col-sm-4 col-12>
+				<form (ngSubmit)="send(f)" #f="ngForm">
+
+					<ion-item text-center>
+						<ion-label>New Donation</ion-label>
+					</ion-item>
+
+					<ion-item class="item-leave-height">
+						<ion-label>Donor</ion-label>
+						<ion-select interface = "popover" name="donor" ngModel required>
+							<ion-option *ngFor="let key of keys" value="{{key.id}}">{{ key.name }}</ion-option>
+						</ion-select>
+					</ion-item>
+
+					<ion-item>
+							<ion-label>Amount</ion-label>
+						<ion-input name="amount" ngModel></ion-input>
+					</ion-item>
+
+					<ion-item>
+							<ion-label>Date</ion-label>
+						<ion-datetime placeholder="Date" displayFormat="DD/MM/YYYY" name="collected_at" ngModel></ion-datetime>
+					</ion-item>
+
+					<ion-item text-center>
+						<button ion-button class="send-btn">
+							<ion-icon name="paper-plane" type="submit" class="primary">&nbsp;&nbsp;&nbsp;</ion-icon> Submit
+						</button>
+					</ion-item>
+
+				</form>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

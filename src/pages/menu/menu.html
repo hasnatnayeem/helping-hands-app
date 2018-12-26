@@ -1,0 +1,135 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="menu-wrapper" text-center>
+  <ion-grid>
+    <ion-row class="menu-header">
+      <ion-col offset-4 col-4 offset-md-4 col-md-4 offset-sm-4 col-sm-4 class="logo" text-center>
+        <img src="./assets/imgs/logo2.png" alt="" text-center color="primary">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row>
+    <ion-col col-12>
+      <p text-center class="white bold primary">{{ session.user.name }}</p>
+    </ion-col>
+  </ion-row>
+
+
+
+  <ion-grid>
+
+    <ion-row>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goCollectionPage('All Collections')">
+          <img src="./assets/imgs/dining-serv.png" alt="">
+          <p>Collections</p>
+        </div>
+      </ion-col>
+
+
+
+      <ion-col col-6 col-md-3 col-sm-3>
+          <div class="m-menu" (click)="goCollectionPage('My Collections')">
+            <img src="./assets/imgs/dining-serv.png" alt="">
+            <p>My Collections</p>
+          </div>
+        </ion-col>
+
+        <ion-col col-6 col-md-3 col-sm-3>
+          <div class="m-menu" (click)="goFormPage()">
+            <img src="./assets/imgs/dining-serv.png" alt="">
+            <p>New Entry</p>
+          </div>
+        </ion-col>
+
+        <ion-col col-6 col-md-3 col-sm-3>
+          <div class="m-menu" (click)="goDonorPage()">
+            <img src="./assets/imgs/dining-serv.png" alt="">
+            <p>Donors</p>
+          </div>
+        </ion-col>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="logout()">
+          <img src="./assets/imgs/logout-button-icon.png" alt="">
+          <p>Logout</p>
+        </div>
+      </ion-col>
+
+      <!-- <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goFormPage('Maintenance')">
+          <img src="./assets/imgs/maintenance.png" alt="">
+          <p>Maintenance</p>
+        </div>
+      </ion-col>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goFormPage('Housekeeping')">
+          <img src="./assets/imgs/housekeeping.png" alt="">
+          <p>Housekeeping</p>
+        </div>
+      </ion-col>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goFormPage('Salon')">
+          <img src="./assets/imgs/salon.png" alt="">
+          <p>Salon</p>
+        </div>
+      </ion-col> 
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="checkIn()">
+          <img src="./assets/imgs/morning-check.png" alt="">
+          <p>Morning Check In</p>
+        </div>
+      </ion-col>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goTimelinePage()">
+          <img src="./assets/imgs/news.png" alt="">
+          <p>News</p>
+        </div>
+      </ion-col>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goToDocumentPage()">
+          <img src="./assets/imgs/docs-forms.png" alt="">
+          <p>Documents & Forms</p>
+        </div>
+      </ion-col>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goToEventPage()">
+          <img src="./assets/imgs/news-icon.png" alt="">
+          <p>Events</p>
+        </div>
+      </ion-col>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goFormPage('Tech')">
+          <img src="./assets/imgs/tech-icon.png" alt="">
+          <p>Tech</p>
+        </div>
+      </ion-col>
+
+      <ion-col col-6 col-md-3 col-sm-3>
+        <div class="m-menu" (click)="goProfilePage()">
+          <img src="./assets/imgs/picto_user.png" alt="">
+          <p>Profile</p>
+        </div>
+      </ion-col>
+
+      
+    -->
+    </ion-row>
+
+  </ion-grid>
+
+
+</ion-content>
