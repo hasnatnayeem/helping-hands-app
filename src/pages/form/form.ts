@@ -21,6 +21,7 @@ export class FormPage {
   session: any
   keys:any = []
   selectedValue:any;
+  collectedAt: String = new Date().toISOString();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public authService: AuthService) {
     this.session = this.authService.getSession()
@@ -56,7 +57,7 @@ export class FormPage {
     data = {
         "donor": form.value.donor,
         "collector": this.session.user.id,
-        "collected_at": form.value.collected_at,
+        "collected_at": form.value.collected_at.split("T")[0],
         "amount": form.value.amount
     }
 
