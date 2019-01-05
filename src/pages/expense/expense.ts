@@ -18,6 +18,7 @@ export class ExpensePage {
     title: any = "Expenses   ";
     expenses: any;
     summary: any;
+    balance: any;
 
     constructor(public navCtrl: NavController, public navParams: NavParams, public authService: AuthService) {
         this.loadExpenses();
@@ -30,6 +31,7 @@ export class ExpensePage {
             this.authService.stoptLoadingAlert();
             this.expenses = response.expenses;
             this.summary = response.summary;
+            this.balance = response.balance;
         }, (err) => {
             this.authService.stoptLoadingAlert()
             this.authService.showAlert("Error", "An error occurred")
